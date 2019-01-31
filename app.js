@@ -1,7 +1,20 @@
+const addListeners = function () {
+    setTimeout(function() {
+        // console.log("SetTimeout Running")
+    
+        const getIMDB = function () {
+            imdbValue = $(this).attr('imdb-id');
+            console.log(imdbValue);
+            getTMDBID(imdbValue);
+        }
+        $('.poster').on('click', getIMDB);
+    }, 0)
+}
+
 const searchTitles = function (e) {
     e.preventDefault();
     const title = $('#movie-title').val().trim();
-    console.log(title);
+    // console.log(title);
     getTitlePoster(title);
 }
 
