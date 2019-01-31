@@ -1,0 +1,13 @@
+input,
+img,
+p,
+button {
+    margin: 10px;
+}
+img {
+    width: 200px;
+    height: 280px;
+}
+input {
+    width: 95%;
+}
