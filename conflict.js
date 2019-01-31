@@ -1,7 +1,5 @@
-const counter = 0
-const timer = function(){
-    setTimeout(function(){
-        counter++; }, 3000)
-};
 
-timer();
+const add = function (x , y) {
+    return x + y;
+}
+add(3,5);
