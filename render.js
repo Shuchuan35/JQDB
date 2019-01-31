@@ -4,7 +4,7 @@ const render = function (posters) {
     for (let i = 0; i < posters.length; i++) {
         const imgDiv = $('<img>');
         imgDiv.addClass('poster');
-        if (posters[i].Poster !== 'N/A') {
+        if (posters[i].Poster !== 'N/A' && posters[i].Type === 'movie') {
             imgDiv.attr('src', posters[i].Poster);
             imgDiv.attr('imdb-id', posters[i].imdbID);
 
