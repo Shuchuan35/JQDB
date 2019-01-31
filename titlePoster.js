@@ -19,7 +19,6 @@ const getTMDBID = function (imdbID) {
         url: queryURL,
         method: 'GET'
     }).then(function (res) {
-        console.log(res.videos.results[0].key);
         const vKey = res.videos.results[0].key;
         const src = `https://www.youtube.com/embed/${vKey}`;
         $('#trailer').attr('src', src);
