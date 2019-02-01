@@ -10,6 +10,7 @@ const getTitlePoster = function (title) {
         // console.log(posters[1].imdbID);
         render(posters);
     });
+
 }
 
 const getTMDBID = function (imdbID) {
@@ -25,3 +26,17 @@ const getTMDBID = function (imdbID) {
         // const src = `https://www.youtube.com/embed/RobxOGatwgE`;
     });
 }
+
+
+
+
+const getPopular = function (popularSearch) {
+    const popURL = `https://api.themoviedb.org/3/movie/popular?api_key=2404f28934c0e486a4e4a4accf9101c5&language=en-US&page=1`;
+    $.ajax({
+        url: popURL,
+        method: 'GET'
+    })
+
+    render(posters);
+}
+
