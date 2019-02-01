@@ -12,7 +12,8 @@ body {
 input,
 img,
 p,
-button {
+button,
+iframe {
     margin: 10px;
 }
 img {
@@ -27,4 +28,14 @@ img:hover{
 }
 input {
     width: 95%;
+}
+#movie-poster {
+    width: 380px;
+    height: 500px;
+}
+#inside-trailer {
+    float: left;
+}
+.row {
+    margin-bottom: 40px;
 }
