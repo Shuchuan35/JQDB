@@ -1,3 +1,4 @@
+
 const getTitlePoster = function (title) {
     const queryURL = `https://www.omdbapi.com/?s=${title}&apikey=e0c3e966`;
     $.ajax({
@@ -37,6 +38,16 @@ const getTMDBID = function (imdbID, source) {
         // $('#trailer-title').text(res.videos.results[0].name);
         $('iframe').attr('src', src);
         showTrailer();
-
     });
 }
+
+const getPopular = function (popularSearch) {
+    const popURL = `https://api.themoviedb.org/3/movie/popular?api_key=2404f28934c0e486a4e4a4accf9101c5&language=en-US&page=1`;
+    $.ajax({
+        url: popURL,
+        method: 'GET'
+    })
+
+    render(posters);
+}
+

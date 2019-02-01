@@ -5,7 +5,7 @@ const render = function (posters) {
 
         const imgDiv = $('<img>');
         imgDiv.addClass('poster');
-        if (posters[i].Poster !== 'N/A') {
+        if (posters[i].Poster !== 'N/A' && posters[i].Type === 'movie') {
             imgDiv.attr('src', posters[i].Poster);
             imgDiv.attr('imdb-id', posters[i].imdbID);
         }
@@ -20,8 +20,3 @@ const render = function (posters) {
     showPoster();
 }
 
-// const renderTrailer = function (key) {
-//     const src = `https://www.youtube.com/embed/${key}`;
-//     $('iframe').attr('src', src);
-//     showTrailer();
-// }
