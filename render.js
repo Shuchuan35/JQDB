@@ -10,6 +10,9 @@ const render = function (posters) {
 
             // images += `<img src='${posters[i].Poster}'>`;
         }
+        else {
+            imgDiv.hide();
+        }
         $('#display-poster').append(imgDiv);
     }
     // $('#display-poster').append(images);
