@@ -19,4 +19,5 @@ const render = function (posters) {
     $('#movie-title').val('');
     addListeners();
 
+
 }
