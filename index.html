@@ -15,35 +15,35 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <!-- Input and and dropdown area -->
             <div class="col-2">
-                    <div class="dropdown">
-                        <button class="dropbtn">Categories</button>
-                            <div class="dropdown-content">
-                              <a href="#popular">Popular</a>
-                              <a href="#now-playing">Now Playing</a>
-                              <a href="#coming-soon">Coming Soon</a>
-                            </div>
+                
+                <div class="dropdown">
+                    <button class="dropbtn btn btn-secondary dropdown-toggle">Categories</button>
+                    <div class="dropdown-content">
+                        <a class="dropdown-item" href="#popular" action='popular'>Popular</a>
+                        <a class="dropdown-item" href="#now-playing" action='now_playing'>Now Playing</a>
+                        <a class="dropdown-item" href="#coming-soon" action='upcoming'>Coming Soon</a>
                     </div>
+                </div>
+
                 <p>Enter a movie name to search</p>
                 <form>
                     <input id='movie-title' placeholder=' movie name' />
-                    <button class="btn btn-outline-primary" id='search-title'>search</button>
+                    <button class="btn btn-outline-primary" id='search-title'>
+                        <span><i class="fa fa-search"></i></span>
+                    </button>
                 </form>
             </div>
-<!-- Movie Poster area -->
-            <div class="col-10">
-                <div id="container-movies">
-                    
-                </div>
-            </div>
-        </div>
 
-<!-- YouTube frame below -->
-        <div class="row">
-            <div class="col-2"></div>
             <div class="col-10">
-                <iframe id='trailer' width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div id="display-poster"></div>
+                <div id='trailer'>
+                    <div id='inside-trailer'></div>
+                    <!-- <img id='movie-poster' alt=""> -->
+                    <iframe width="580" height="455" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div id='brief'></div>
+                </div>
             </div>
         </div>
     </div>

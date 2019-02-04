@@ -1,21 +1,35 @@
 const addListeners = function () {
     setTimeout(function() {
-        // console.log("SetTimeout Running")
     
         const getIMDB = function () {
             imdbValue = $(this).attr('imdb-id');
-            console.log(imdbValue);
-            getTMDBID(imdbValue);
+            source = $(this).attr('src');
+            getTMDBID(imdbValue, source);
         }
-        $('.poster').on('click', getIMDB); //gets imdb-id from response (ombd)
+        $('.poster').on('click', getIMDB);
     }, 0)
 }
 
 const searchTitles = function (e) {
     e.preventDefault();
     const title = $('#movie-title').val().trim();
-    // console.log(title);
     getTitlePoster(title);
 }
 
+const showTrailer = function () {
+    $('#trailer').show();
+    $('#display-poster').hide();
+}
+
+const showPoster = function () {
+    $('#trailer').hide();
+    $('#display-poster').show();
+}
+
+const dropdownVal = function () {
+    const inputVal = $(this).attr('action');
+    getPopular(inputVal);
+}
+
+$('.dropdown-item').on('click', dropdownVal);
 $('#search-title').on('click', searchTitles);
