@@ -26,4 +26,10 @@ const showPoster = function () {
     $('#display-poster').show();
 }
 
+const dropdownVal = function () {
+    const inputVal = $(this).attr('action');
+    getPopular(inputVal);
+}
+
+$('.dropdown-item').on('click', dropdownVal);
 $('#search-title').on('click', searchTitles);
