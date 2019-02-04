@@ -1,33 +1,60 @@
-body {
-    background: linear-gradient(132deg, #ec5218, #1665c1);
-    background-size: 400% 400%;
-    animation: BackgroundGradient 15s ease infinite;
+body { 
+    background-color: #ccc;
 }
-
-@keyframes BackgroundGradient {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-input,
-img,
-p,
-button {
+    
+    /*These are the background settings*/
+    /* background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, rgb(180, 58, 58));
+    /**/
+    /* background-size: 400% 400%;                                  */
+    /* animation: BackgroundGradient 15s ease infinite;             */
+ /* }                                                                */
+                                                                
+ /* @keyframes BackgroundGradient {                                  */
+    /* 0% {background-position: 0% 50%;}                            */
+    /* 50% {background-position: 100% 50%;}                         */
+    /* 100% {background-position: 0% 50%;}                          */
+ /* }                                                                */ */
+ .instructions{ /* here I changed the "enter a movie name" font to white */
+    color: #ddd;
+ }
+ form {  /*here I widened the input field mininum because it was very small in mobile*/
+    min-width: 75px;
+ }
+ .col-10 {       / *this is the poster column*/
+    align-content: center;
+    padding-right: 0%;
+ }
+ 
+ .col-2{
+    border: 5px;
+    padding-right: 5px;
+ 
+ }
+ .display-poster{  /*these are the individula poster divs*/
+    max-width: 100%;
+ }
+ input,
+ img,
+ p,
+ button {
     margin: 10px;
-}
-img {
-    width: 200px;
-    height: 280px;
-}
-
-img:hover{
+ }
+ img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 10px;
+ }
+ img:hover{
     box-shadow: 5px 3px 5px #ccc;
     transition: box-shadow 1s;
-
-}
-input {
+ }
+ input {
     width: 95%;
-}
+ }
+ 
+ .container-fluid{
+ align-content: center;
+ }
 
 
 
@@ -65,3 +92,165 @@ input {
   .dropdown:hover .dropdown-content {display: block;}  
   
   .dropdown:hover .dropbtn {background-color: #007bff;}
+
+
+
+  /* --------------SPECIAL EFFECTS AREA --------------------- */
+  /* @import url('https://fonts.googleapis.com/css?family=Open+Sans:700,400'); */
+
+body{
+	margin: 0;
+	padding: 0;
+	/* background-color: #555; */
+	font-family: 'Open Sans', sans-serif;
+}
+#container-movies{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    margin-top: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.container-movie{
+	position: relative;
+	margin: 2% 3%;
+    perspective: 1000px;
+    overflow:visible;
+}
+.movie{
+	position: relative;
+	width: 270px;
+    height: 400px;
+    top: 0;
+	left: 0;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg) translateZ(-130px);
+	-webkit-transform: rotateY(0deg) translateZ(-130px);
+	-moz-transform: rotateY(0deg) translateZ(-130px);
+	transition: all 0.8s ease-in-out;
+	-moz-transition: all 0.8s ease-in-out;
+	-webkit-transition: all 0.8s ease-in-out;
+}
+.movie .movie-inside{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+    left: 0;
+	z-index: 3;
+	transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	backface-visibility: hidden;
+	box-shadow: 0 5px 7px rgba(0,0,0,.15);
+
+}
+.movie-inside img {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    margin-left: 0;
+}
+.container-movie .movie .front{
+	transform-origin: 0%;
+	-webkit-transform-origin: 0%;
+	-moz-transform-origin: 0%;
+
+	transform: translateZ(130px);
+	-webkit-transform: translateZ(130px);
+	-moz-transform: translateZ(130px);
+
+	background-color: #000;
+}
+.container-movie:hover .front{
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-webkit-transition: opacity 0.5s ease-in-out;
+}
+.container-movie .movie .back{
+	transform-origin: 100%;
+	transform: rotateY(90deg) translateX(140px) translateZ(0px);
+	-webkit-transform: rotateY(90deg) translateX(140px) translateZ(0px);
+	-moz-transform: rotateY(90deg) translateX(140px) translateZ(0px);
+	background: linear-gradient(#fff, #e6e4e4);
+}
+.container-movie:hover .movie{
+	transform: rotateY(-78deg) translateX(-70px) translateZ(0px);
+	-webkit-transform: rotateY(-78deg) translateX(-70px) translateZ(0px);
+	-moz-transform: rotateY(-78deg) translateX(-70px) translateZ(0px);
+}
+.container-movie:hover .front{
+	opacity: 0.5;
+}
+
+/* MOVIE DETAILS */
+.movie-details{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(-90deg, #fff, #eee);
+}
+.movie-details h1{
+	position:relative;
+	font-size: 20px;
+	font-weight: 700;
+	color: #464646;
+	text-align: left;
+	margin: 10px; 
+	text-transform: uppercase;
+}
+.movie-details h1 span{
+	font-size: 14px;
+	font-weight: 400;
+	color: #aaa;
+	text-transform: lowercase;
+}
+.movie-tags{
+	position: relative;
+	margin: 0 10px;
+	padding: 0;
+}
+.movie-tags li{
+	position: relative;
+	list-style: none;
+	display: inline-block;
+	background-color: #ccc;
+	margin: 0 3px 0 0 ;
+	padding: 3px 7px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+.movie-tags li a{
+	position: relative;
+	text-decoration: none;
+	font-size: 10px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #fff;
+}
+.movie-tags li:hover{
+	background-color: #aaa;
+}
+.movie-synopsis{
+	width: 90%;
+	font-size: 12px;
+	line-height: 15px;
+    padding: 10px, 10px 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}

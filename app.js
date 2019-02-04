@@ -7,7 +7,7 @@ const addListeners = function () {
             console.log(imdbValue);
             getTMDBID(imdbValue);
         }
-        $('.poster').on('click', getIMDB);
+        $('.poster').on('click', getIMDB); //gets imdb-id from response (ombd)
     }, 0)
 }
 
