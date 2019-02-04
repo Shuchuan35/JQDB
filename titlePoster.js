@@ -39,7 +39,7 @@ const getTMDBID = function (imdbID, source) {
 }
 
 const getPopular = function (search) {
-    const popURL = `https://api.themoviedb.org/3/movie/${search}?api_key=2404f28934c0e486a4e4a4accf9101c5&language=en-US&page=1`;
+    const popURL = `https://api.themoviedb.org/3/movie/${search}?api_key=2404f28934c0e486a4e4a4accf9101c5&language=en-US&page=1&region=US`;
     $.ajax({
         url: popURL,
         method: 'GET'
