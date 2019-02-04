@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(132deg, #ec5218, #1665c1);
+    /*background: linear-gradient(132deg, #ec5218, #1665c1);*/background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
     background-size: 400% 400%;
     animation: BackgroundGradient 15s ease infinite;
 }
@@ -42,11 +42,12 @@ input {
 
 .col-2 {
     color: #ffffff;
+    font-size: 18px;
 }
 
 .dropbtn {
     background-color: transparent;
-    color: white;
+    color: #007bff;
     padding: 12px;
     font-size: 22px;
     border-color: #007bff;
