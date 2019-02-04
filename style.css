@@ -40,7 +40,9 @@ input {
     margin-bottom: 40px;
 }
 
-
+.col-2 {
+    color: #ffffff;
+}
 
 .dropbtn {
     background-color: transparent;
