@@ -1,14 +1,7 @@
-const addListeners = function () {
-    setTimeout(function() {
-    
-        const getIMDB = function () {
-            imdbValue = $(this).attr('imdb-id');
-            source = $(this).attr('src');
-            getTMDBID(imdbValue, source);
-        }
-        // $('.poster').on('click', getIMDB);
-        $('.container-movie').on('click', getIMDB); //Barry added
-    }, 0)
+const getIMDB = function () {
+    imdbValue = $(this).attr('imdb-id');
+    source = $(this).attr('src');
+    getTMDBID(imdbValue, source);
 }
 
 const searchTitles = function (e) {
@@ -34,3 +27,4 @@ const dropdownVal = function () {
 
 $('.dropdown-item').on('click', dropdownVal);
 $('#search-title').on('click', searchTitles);
+$('#display-poster').on('click', '.container-movie', getIMDB);
