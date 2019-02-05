@@ -70,7 +70,7 @@ const render = function (posters, dropdown) {
                 imgDiv.hide();
             }
         }
-    }, 1)  // end setTimeOut
+    }, 4)  // end setTimeOut
 
         $('#display-poster').append(imgDiv);
     }
