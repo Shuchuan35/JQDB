@@ -6,7 +6,8 @@ const addListeners = function () {
             source = $(this).attr('src');
             getTMDBID(imdbValue, source);
         }
-        $('.poster').on('click', getIMDB);
+        // $('.poster').on('click', getIMDB);
+        $('.container-movie').on('click', getIMDB); //Barry added
     }, 0)
 }
 
