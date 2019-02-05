@@ -1,5 +1,5 @@
 body {
-    /*background: linear-gradient(132deg, #ec5218, #1665c1);*/background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
     background-size: 400% 400%;
     animation: BackgroundGradient 15s ease infinite;
 }
@@ -48,7 +48,7 @@ input {
 .dropbtn {
     background-color: transparent;
     color: #007bff;
-    padding: 12px;
+    padding: 14px;
     font-size: 22px;
     border-color: #007bff;
   }
@@ -78,7 +78,7 @@ input {
 
   .dropdown:hover .dropdown-content {display: block;}  
   
-  .dropdown:hover .dropbtn {background-color: #007bff;}
+  .dropdown:hover .dropbtn {background-color: #007bff; color: #ffffff;}
 
    /* --------------SPECIAL EFFECTS AREA --------------------- */
   /* @import url('https://fonts.googleapis.com/css?family=Open+Sans:700,400'); */
@@ -248,4 +248,12 @@ body{
     -webkit-line-clamp: 5;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+}
+
+#brief {
+    color: #ffffff;
+}
+
+h5 {
+    font-size: 20px;
 }
