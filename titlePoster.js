@@ -1,7 +1,7 @@
 const getTitlePoster = function (title) {
-    const queryURL = `https://www.omdbapi.com/?s=${title}&apikey=e0c3e966`;
+    const omdbBaseURL = "https://www.omdbapi.com/";
     $.ajax({
-        url: queryURL,
+        url: `${omdbBaseURL}?s=${title}&apikey=e0c3e966`,
         method: 'GET'
     }).then(function (response) {
         const titleA = Object.values(response);
@@ -12,9 +12,8 @@ const getTitlePoster = function (title) {
         // //iterating through posters[] adding object values from tmdb api
         for (let i = 0; i < posters.length; i++) {
             const wholeTitle = posters[i].Title;
-            const queryURL2 = `http://www.omdbapi.com/?t=${wholeTitle}&plot=long&apikey=eb08547`;
             const apikey = '2404f28934c0e486a4e4a4accf9101c5';
-            const queryURL3 = `http://api.themoviedb.org/3/movie/${posters[i].imdbID}?api_key=${apikey}&append_to_response=videos`;
+            const queryURL3 = `https://api.themoviedb.org/3/movie/${posters[i].imdbID}?api_key=${apikey}&append_to_response=videos`;
             $.ajax({  //get the backdrop path for img on back of 3d object 
                 url: queryURL3,
                 method: 'GET'
@@ -28,7 +27,7 @@ const getTitlePoster = function (title) {
                 return posters;
             });
             $.ajax({
-                url: queryURL2,
+                url: `${omdbBaseURL}?t=${wholeTitle}&plot=long&apikey=eb08547`,
                 method: 'GET'
             }).then(function (responseT) {  //back to omdb to retrieve more key/value pairs to add to posters[]
                 const genres = responseT.Genre; //separate the string Genre into distinct variables
