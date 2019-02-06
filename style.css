@@ -10,8 +10,15 @@ button,
 iframe {
     margin: 10px;
 }
+input {
+    max-width: 250px;
+    font-size: 100%;
+}
+iframe {
+    width: 45%;
+}
 img {
-    width: 200px;
+    width: 250px;
     height: 280px;
 }
 
@@ -34,7 +41,7 @@ input {
     margin-bottom: 40px;
 }
 
-.col-2 {
+.col {
     color: #ffffff;
     font-size: 18px;
 }
@@ -328,4 +335,20 @@ h6:focus {
         text-shadow: none;
         box-shadow: none;
     }    
+}
+@media screen and (max-width: 768px) {
+    .col,
+    .col-10 {
+       padding-top: 20px;
+       margin-left: 12%;
+    }
+iframe {
+    margin-top: 12%;
+    margin-left: 0;
+    width: 90%;
+    height: auto;
+}
+p {
+    font-size: smaller;
+}
 }
