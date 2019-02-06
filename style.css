@@ -273,18 +273,17 @@ h5 {
 }
 
 h6 {
-  font-size: 80px;
+  font-size: 600%;
   font-weight: 200;
   font-style: italic;
   color: #fff;
-  padding: 5px 10px;
+  padding: 10px 0 10px;
   border: 0.4rem solid #fff;
   border-radius: 2rem;
   text-transform: uppercase;
   animation: flicker 1.5s infinite alternate; 
   text-align: center; 
-  margin-left: 30px;
-  margin-right: 30px;   
+  margin: 10px 30px 0 30px;   
 }
 
 h6::-moz-selection {

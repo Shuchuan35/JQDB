@@ -23,8 +23,7 @@ const getTitlePoster = function (title) {
                 };
 
                 $.extend(posters[i], objectAddB);  //extend objectAddB to the corresponding object in posters[]
-                render(posters);
-                return posters;
+                //return posters;
             });
             $.ajax({
                 url: `${omdbBaseURL}?t=${wholeTitle}&plot=long&apikey=eb08547`,
@@ -44,7 +43,8 @@ const getTitlePoster = function (title) {
                     website: responseT.Website
                 };
                 $.extend(posters[i], objectAdd);  //extend objectAdd to the corresponding object in posters[]
-                console.log(posters);
+                render(posters);
+
             });
         }
         //=================================End Barry's New Code
